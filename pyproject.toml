@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "dash-plotly-upset"
+version = "0.1.0"
+description = "Reusable Plotly UpSet figures with Dash selection helpers"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "pandas",
+    "plotly",
+]
+
+[project.optional-dependencies]
+dash = [
+    "dash",
+]
+dev = [
+    "pytest",
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+dash_plotly_upset = ["assets/*.js"]
+
+[project.urls]
+Repository = "https://github.com/mmmddd98/dash-plotly-upset"
+Issues = "https://github.com/mmmddd98/dash-plotly-upset/issues"
